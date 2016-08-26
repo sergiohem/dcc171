@@ -4,16 +4,18 @@ public class Livro {
     private String titulo;
     private Integer ano;
     private Integer paginas;
-    private Float preco;
-
+    private Double preco;
+    private String autor;
+    
     public Livro() {
     }
 
-    public Livro(String titulo, Integer ano, Integer paginas, Float preco) {
+    public Livro(String titulo, Integer ano, Integer paginas, Double preco, String autor) {
         this.titulo = titulo;
         this.ano = ano;
         this.paginas = paginas;
         this.preco = preco;
+        this.autor = autor;
     }
 
     public String getTitulo() {
@@ -40,18 +42,24 @@ public class Livro {
         this.paginas = paginas;
     }
 
-    public Float getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(Float preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
+    }
+    
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     @Override
     public String toString() {
         return "Livro{" + "titulo=" + titulo + ", ano=" + ano + ", paginas=" + paginas + ", preco=" + preco + '}';
     }
-    
-    
 }
